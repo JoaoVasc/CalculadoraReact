@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+:root {
+	--fundo: #111111;
+	--cor1: #2f2f2f;
+	--detalhe1: #f6f6f6;
+	--detalhe2: #ffcb74;
+    --border-btn: solid .1rem #888;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none; border: none;
+    transition: .2s linear;
+}
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .6rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--cor1);
+    border-radius: 5rem;
+}
+body{
+    background: var(--fundo);
+}
+.principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.principal .calculator{
+    width: 25rem; height: 40rem;
+    border-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 1fr 6rem 6rem 6rem 6rem 6rem;
+}
+.principal .calculator .btn{
+    font-size: 1.4rem;
+    border-right: var(--border-btn);
+    border-bottom: var(--border-btn);
+}
+.principal .calculator .btn:hover{
+    background-color: #999;
+}
+.principal .calculator .display{
+    background: #ccc4;
+    grid-column: span 4;
+    color: var(--detalhe1);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 200;
+}
+.btn.double{
+    grid-column: span 2;
+}
+.btn.triple{
+    grid-column: span 3;
+}
+.operation{
+    background-color: #fa8231;
+    color: #fff;
+}
+.btn.operation:hover{
+    background: #fa8231cc;
+}
